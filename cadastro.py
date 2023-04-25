@@ -16,7 +16,7 @@ def index():
         idade = request.form['idade']
         genero = request.form['genero']
 
-        conn = mysql.connector.connect(user='cleriston', password='mudar123', host='root', database='mysql5')
+        conn = mysql.connector.connect(user='cleriston', password='mudar123', host='172.17.0.0', database='mysql5')
         cursor = conn.cursor()
         query = "INSERT INTO pessoas (nome, idade, genero) VALUES (%s, %s, %s)"
         values = (nome, idade, genero)
